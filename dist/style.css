@@ -7,13 +7,15 @@
 }
 
 :root {
-  --primary-color: #0b133a;
+  --primary-color: #0b143c;
   --secondary-color: #fff;
   --triary-color: #ebf4f1;
-  --accent-color: #0c7075;
+  --accent-color: #0c6e73;
   --primary-font: "Inter", Helvetica, sans-serif;
   --secondary-font: "Be Vietnam Pro", Helvetica, sans-serif;
   --bottom-width: 50%;
+
+  --hover-state: hsl(183, 81%, 30%);
 }
 
 body {
@@ -55,14 +57,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 24px;
   margin-top: 36px;
 }
 
 aside {
   background-color: #ebf4f1;
   box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.2);
-  padding-inline: 36px;
+  padding-inline: 58px;
   z-index: 2;
 }
 
@@ -70,7 +72,7 @@ aside {
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 36px;
   margin: 24px 0px;
 }
 
@@ -104,7 +106,7 @@ aside {
 }
 
 .btns > * {
-  border-radius: 12px;
+  border-radius: 8px;
   color: var(--secondary-color);
   font-size: 1em;
   padding: 0px 12px;
@@ -114,6 +116,7 @@ aside {
 .btns button:first-child {
   background-color: var(--accent-color);
   border: solid 0px white;
+  padding: 0px 24px;
 }
 
 .btns button:last-child {
@@ -121,9 +124,26 @@ aside {
   border: solid 1px white;
 }
 
-main {
 
+.btns button:first-child:hover{
+  background-color: var(--hover-state);
 }
+
+.btns button:last-child:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btns button:first-child:active{
+  background-color: var(--triary-color);
+  color: var(--accent-color);
+}
+
+.btns button:last-child:active{
+  background-color: var(--triary-color);
+  color: var(--accent-color);
+}
+
 
 .bottom {
   width: var(--bottom-width);
@@ -181,14 +201,14 @@ aside button {
 footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  min-height: 100px;
+  min-height: 88px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 12px;
   padding: 12px;
-  font-size: 2em;
+  font-size: 1.5em;
   box-shadow: 0px -6px 25px 0px rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
@@ -219,7 +239,7 @@ h2 {
 .checkbox-container {
   display: inline-block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 25px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 16px;
