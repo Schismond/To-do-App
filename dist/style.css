@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0b133a;
+  --secondary-color: #fff;
+  --triary-color: #ebf4f1;
+  --accent-color: #0c7075;
+  --primary-font: "Inter", Helvetica, sans-serif;
+  --secondary-font: "Be Vietnam Pro", Helvetica, sans-serif;
+  --bottom-width: 50%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--primary-font);
+}
+
+nav {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.4);
+}
+
+.logo img {
+  height: 60px;
+}
+
+.header {
+  color: var(--secondary-color);
+  font-size: 2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex: 1;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+aside {
+  background-color: #ebf4f1;
+  box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  padding-inline: 36px;
+  z-index: 2;
+}
+
+.tasks,
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 24px;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+.task-project-add {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.left {
+  display: flex;
+  gap: 12px;
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
+}
+
+.btns > * {
+  border-radius: 12px;
+  color: var(--secondary-color);
+  font-size: 1em;
+  padding: 0px 12px;
+  cursor: pointer;
+}
+
+.btns button:first-child {
+  background-color: var(--accent-color);
+  border: solid 0px white;
+}
+
+.btns button:last-child {
+  background-color: transparent;
+  border: solid 1px white;
+}
+
+main {
+
+}
+
+.bottom {
+  width: var(--bottom-width);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+}
+
+aside button {
+  background-color: var(--primary-color);
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  font-weight: 300;
+  font-size: 1.5em;
+  padding: 8px 24px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-left: 24px;
+  border: 0px solid black;
+}
+
+.active {
+  background-color: var(--accent-color);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--bottom-width);
+}
+
+.task-project-add input {
+  border-radius: 12px;
+  padding: 8px 0 8px 12px;
+  margin-right: 24px;
+  flex: 1;
+  outline: none;
+  border: 1px solid #ddd;
+  font-size: 20px;
+}
+
+.top button {
+  background-color: var(--accent-color);
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  font-size: 1em;
+  cursor: pointer;
+  padding: 12px;
+  border: 0px solid black;
+  border-radius: 12px;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  font-size: 2em;
+  box-shadow: 0px -6px 25px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.made-by {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.git {
+  height: 0.8em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+h2 {
+  font-family: var(--primary-font);
+  font-weight: 800;
+  font-size: 1.7em;
+}
+/* izan */
+
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+.custom-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox:checked ~ .checkmark {
+  background-color: var(--accent-color);
+}
+
+.custom-checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
+@keyframes checkAnim {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+
+.custom-checkbox:checked ~ .checkmark:after {
+  animation: checkAnim 0.2s forwards;
+}
