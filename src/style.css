@@ -72,11 +72,11 @@ aside {
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 24px;
   margin: 24px 0px;
 }
 
-.task {
+#tasks {
   display: flex;
   justify-content: space-between;
   background-color: var(--primary-color);

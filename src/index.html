@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="/dist/main.js" defer></script>
-    <link rel="stylesheet" href="/dist/style.css" />
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
     <nav>
@@ -13,18 +13,23 @@
       <h1 class="header">To-Do App</h1>
     </nav>
     <div class="container">
-      <main>
+      <main id="project-preview">
         <div class="top">
           <h2>Tasks</h2>
           <button>Add Task</button>
         </div>
-        <div class="bottom">
-          <div class="task">
+        <div class="bottom" id="tasks-list">
+          <div id="tasks">
             <div class="left">
               <label class="checkbox-container">
-                <input name="task-check" class="custom-checkbox" checked="" type="checkbox">
+                <input
+                  name="task-check"
+                  class="custom-checkbox"
+                  checked=""
+                  type="checkbox"
+                />
                 <span class="checkmark"></span>
-            </label>
+              </label>
               <p id="task-name">Task Name</p>
             </div>
             <p id="due-date">12/12/2012</p>
@@ -42,14 +47,14 @@
         <div class="tasks">
           <h2>Tasks :</h2>
           <div class="buttons">
-            <button class="active">All</button>
-            <button>Today</button>
-            <button>Important</button>
+            <button id="button-inbox-projects" class="active">All</button>
+            <button id="button-today-projects">Today</button>
+            <button id="button-week-projects">This week</button>
           </div>
         </div>
         <div class="projects">
           <h2>Projects :</h2>
-          <button>+ Add project</button>
+          <button id="button-add-project">+ Add project</button>
         </div>
       </aside>
     </div>
@@ -57,9 +62,13 @@
       <div class="made-by">
         <p>This website have been built by Schismond</p>
         <a href="https://github.com/Schismond"
-          ><img class="git" src="/dist/img/github.png"
+          ><img class="git" src="/src/img/github.png"
         /></a>
       </div>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
